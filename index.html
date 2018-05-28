@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My first Vue app</title>
+        <script src="https://unpkg.com/vue"></script>
+    </head>
+    <body>
+        <div id="app">
+            {{ message }}
+            <p v-bind:title="title">This is title</p>
+            <strong v-if="check">Show or hidden</strong>
+            <div> All cities:
+                <ul>
+                    <li v-for="city in cities">{{city}}</li>
+                </ul>
+            </div>
+            <button v-on:click="changeMessage">Click to change message!</button>
+            <br>
+            <br>
+            <input type="" name="" v-model="message">
+            <ul>
+                <app-nav v-for="item in groceryList"
+                    v-bind:todo="item"
+                    v-bind:key="item.id">
+
+                </app-nav>
+            </ul>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>
