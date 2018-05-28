@@ -13,11 +13,24 @@ var app = new Vue({
             { id: 0, text: 'Cà pháo' },
             { id: 1, text: 'Mắm tôm' },
             { id: 2, text: 'Miễn ăn được là được' }
-        ]
+        ],
+        name: 'Triet Pham',
+        age: 25,
+        bongdaso: 'http://bongdaso.com/main.aspx',
     },
     methods: {
         changeMessage: function () {
             this.message = 'I changed message'
+        },
+        editInfor: function (time) {
+            return time + ' ' + this.name;
+        },
+        addYear: function () {
+            this.age++;
+        },
+        subYear: function () {
+            this.age--;
         }
+        
     }
 })

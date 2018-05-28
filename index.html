@@ -6,7 +6,7 @@
     </head>
     <body>
         <div id="app">
-            {{ message }}
+            <!-- {{ message }}
             <p v-bind:title="title">This is title</p>
             <strong v-if="check">Show or hidden</strong>
             <div> All cities:
@@ -24,7 +24,27 @@
                     v-bind:key="item.id">
 
                 </app-nav>
+            </ul> -->
+
+            <h1>{{editInfor('Good morning')}}</h1>
+            <ul>
+                <li>Name: {{name}}</li>
+                <li>Age: {{age}}</li>
             </ul>
+            <br>
+            <br>
+            <h2>Data Binding</h2>
+            <a v-bind:href="bongdaso">Bongdaso.com</a>
+            <br>
+            <a :href="bongdaso">Bongdaso.com</a>
+            <br>
+            <br>
+            <h2>Event</h2>
+            <!-- <button v-on:click="age++">Add a year</button>
+            <button v-on:click="age--">Subtract a year</button> -->
+
+            <button v-on:click="addYear">Add a year</button>
+            <button v-on:click="subYear">Subtract a year</button>
         </div>
 
         <script src="app.js"></script>
