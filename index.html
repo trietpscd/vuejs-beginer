@@ -46,7 +46,40 @@
             <button v-on:click="addYear">Add a year</button>
             <button v-on:click="subYear">Subtract a year</button>
         </div>
-
+        <div id="example">
+            <p>Message:{{message}}</p>
+            <p>Computed:{{changeMessage}}</p>
+            <br>
+            <br>
+            <h4>{{a}},{{b}}</h4>
+            <button v-on:click="a++">Add a number</button>
+            <button v-on:click="b--">Subtract a number</button>
+            <br>
+            <br>
+            <p>Add A: {{addNumberA}}</p>
+            <p>Add B: {{addNumberB}}</p>
+        </div>
+        <div id="conditional">
+            <h2>Conditional</h2>
+            <button @click="error = !error">Toggle Error</button>
+            <p v-if="error">Error</p>
+            <p v-show="!error">Error show</p>
+            <br>
+            <br>
+            <app-element></app-element>
+        </div>
+        <div id="loop">
+            <h2>Loop For</h2>
+            <ul v-for="pro in profile">
+                <li>Name:{{pro.name}} ------ Age:{{pro.age}}</li>
+            </ul>
+            <br>
+            <br>
+            <app-element></app-element>
+            <input type="text" name="name" ref="name">
+            <button @click="readRefs"> Read Refs</button>
+            <strong>Result output: {{value}}</strong>
+        </div>
         <script src="app.js"></script>
     </body>
 </html>
